@@ -1,0 +1,3237 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/RodrigoEspinosa/gitter-cli">gitter-cli (v0.8.5)</a>
+</h1>
+<h4>A gitter client for your console.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli">module gitter-cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history_message">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history_message
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>marked
+            <span class="apidocSignatureSpan">(src, opt, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>message
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.room">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>room
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>user
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>chat_history.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>chat_history_message.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>commands</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>configuration</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>connection</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>message.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>room.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.</span>user.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.chat_history">module gitter-cli.chat_history</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history.chat_history">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.chat_history.prototype">module gitter-cli.chat_history.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history.prototype.addMessage">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>addMessage
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history.prototype.getLastMessage">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>getLastMessage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history.prototype.getTotalLines">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>getTotalLines
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history.prototype.scrollDown">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>scrollDown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history.prototype.scrollUp">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>scrollUp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>messages</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.chat_history_message">module gitter-cli.chat_history_message</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history_message.chat_history_message">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history_message
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.chat_history_message.prototype">module gitter-cli.chat_history_message.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history_message.prototype.getLinesAmount">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history_message.prototype.</span>getLinesAmount
+            <span class="apidocSignatureSpan">(messageText)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history_message.prototype.getMessageText">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history_message.prototype.</span>getMessageText
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.chat_history_message.prototype.parseText">
+            function <span class="apidocSignatureSpan">gitter-cli.chat_history_message.prototype.</span>parseText
+            <span class="apidocSignatureSpan">(messageText, wordwrap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">gitter-cli.chat_history_message.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.commands">module gitter-cli.commands</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.commands._requireAuthentication">
+            function <span class="apidocSignatureSpan">gitter-cli.commands.</span>_requireAuthentication
+            <span class="apidocSignatureSpan">(requireAuthentication)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.commands.authorize">
+            function <span class="apidocSignatureSpan">gitter-cli.commands.</span>authorize
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.commands.joinRoom">
+            function <span class="apidocSignatureSpan">gitter-cli.commands.</span>joinRoom
+            <span class="apidocSignatureSpan">(roomName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.commands.rooms">
+            function <span class="apidocSignatureSpan">gitter-cli.commands.</span>rooms
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.commands.setToken">
+            function <span class="apidocSignatureSpan">gitter-cli.commands.</span>setToken
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.commands.whoAmI">
+            function <span class="apidocSignatureSpan">gitter-cli.commands.</span>whoAmI
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.configuration">module gitter-cli.configuration</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.configuration._getSecrets">
+            function <span class="apidocSignatureSpan">gitter-cli.configuration.</span>_getSecrets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.configuration._loadSecrets">
+            function <span class="apidocSignatureSpan">gitter-cli.configuration.</span>_loadSecrets
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.configuration._loadSecretsSync">
+            function <span class="apidocSignatureSpan">gitter-cli.configuration.</span>_loadSecretsSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.configuration.</span>access</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">gitter-cli.configuration.</span>secretsFileLocation</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">gitter-cli.configuration.</span>token</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.connection">module gitter-cli.connection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.connection.inspect">
+            function <span class="apidocSignatureSpan">gitter-cli.connection.</span>inspect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.connection.promiseDispatch">
+            function <span class="apidocSignatureSpan">gitter-cli.connection.</span>promiseDispatch
+            <span class="apidocSignatureSpan">(resolve, op, operands)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.connection.valueOf">
+            function <span class="apidocSignatureSpan">gitter-cli.connection.</span>valueOf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.logger">module gitter-cli.logger</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">gitter-cli.logger.</span>emitErrs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">gitter-cli.logger.</span>exitOnError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">gitter-cli.logger.</span>padLevels</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">gitter-cli.logger.</span>stripColors</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.logger.debug">
+            function <span class="apidocSignatureSpan">gitter-cli.logger.</span>debug
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.logger.error">
+            function <span class="apidocSignatureSpan">gitter-cli.logger.</span>error
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.logger.info">
+            function <span class="apidocSignatureSpan">gitter-cli.logger.</span>info
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.logger.silly">
+            function <span class="apidocSignatureSpan">gitter-cli.logger.</span>silly
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.logger.verbose">
+            function <span class="apidocSignatureSpan">gitter-cli.logger.</span>verbose
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.logger.warn">
+            function <span class="apidocSignatureSpan">gitter-cli.logger.</span>warn
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">gitter-cli.logger.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>_hnames</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>_names</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>exceptionHandlers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>filters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>levels</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>profilers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>rewriters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.logger.</span>transports</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">gitter-cli.logger.</span>level</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.marked">module gitter-cli.marked</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.marked">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>marked
+            <span class="apidocSignatureSpan">(src, opt, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.InlineLexer">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>InlineLexer
+            <span class="apidocSignatureSpan">(links, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.Lexer">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>Lexer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.Parser">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>Parser
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.inlineLexer">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>inlineLexer
+            <span class="apidocSignatureSpan">(src, links, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.lexer">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>lexer
+            <span class="apidocSignatureSpan">(src, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.options">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>options
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.parse">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>parse
+            <span class="apidocSignatureSpan">(src, opt, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.parser">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>parser
+            <span class="apidocSignatureSpan">(src, options, renderer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.marked.setOptions">
+            function <span class="apidocSignatureSpan">gitter-cli.marked.</span>setOptions
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.marked.</span>Renderer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitter-cli.marked.</span>defaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.message">module gitter-cli.message</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message.message">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>message
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message.createInstance">
+            function <span class="apidocSignatureSpan">gitter-cli.message.</span>createInstance
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message.createInstancesList">
+            function <span class="apidocSignatureSpan">gitter-cli.message.</span>createInstancesList
+            <span class="apidocSignatureSpan">(messages)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.message.prototype">module gitter-cli.message.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message.prototype.getAuthor">
+            function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>getAuthor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message.prototype.getAuthorWithColor">
+            function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>getAuthorWithColor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message.prototype.getText">
+            function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>getText
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.message.prototype.postInit">
+            function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>postInit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.room">module gitter-cli.room</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.room.room">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>room
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.room.prototype">module gitter-cli.room.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.room.prototype.join">
+            function <span class="apidocSignatureSpan">gitter-cli.room.prototype.</span>join
+            <span class="apidocSignatureSpan">(roomName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.room.prototype.writeMessage">
+            function <span class="apidocSignatureSpan">gitter-cli.room.prototype.</span>writeMessage
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.user">module gitter-cli.user</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.user">
+            function <span class="apidocSignatureSpan">gitter-cli.</span>user
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.createInstance">
+            function <span class="apidocSignatureSpan">gitter-cli.user.</span>createInstance
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.getCurrentUser">
+            function <span class="apidocSignatureSpan">gitter-cli.user.</span>getCurrentUser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.getOrCreate">
+            function <span class="apidocSignatureSpan">gitter-cli.user.</span>getOrCreate
+            <span class="apidocSignatureSpan">(user)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitter-cli.user.prototype">module gitter-cli.user.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.prototype.getAuthorColor">
+            function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>getAuthorColor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.prototype.getDisplayName">
+            function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>getDisplayName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.prototype.getUsername">
+            function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>getUsername
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitter-cli.user.prototype.postInit">
+            function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>postInit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli" id="apidoc.module.gitter-cli">module gitter-cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history" id="apidoc.element.gitter-cli.chat_history">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chat_history = function (options) {
+  if (!(this instanceof Blessed.Node)) {
+    return new ChatHistory(options);
+  }
+
+  options = options || {};
+  options.shrink = true;
+  Blessed.Element.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history_message" id="apidoc.element.gitter-cli.chat_history_message">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history_message
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chat_history_message = function (options) {
+  // Ensure the `new` instance.
+  if (!(this instanceof Blessed.Node)) {
+    return new ChatHistoryMessage(options);
+  }
+
+  // Override some options.
+  options = options || {};
+  options.shrink = true;
+  options.tags = true;
+  options.top = 0;
+  options.left = 0;
+  options.style = {
+    bg: Styles['chat-history-message'].bg,
+  };
+
+  // // Check if the message is unread.
+  // if (model.messageInstance.unread) {
+  //   // Set a highlighted background color.
+  //   options.style.bg = '#888';
+  // }
+
+  // Call the super.
+  Blessed.Box.call(this, options);
+
+  this.displayAuthorName = options.displayAuthorName;
+
+  // Get the `chatHistoryMessage` content.
+  var messageText = this.getMessageText(options.model);
+
+  // Create the message object for the current instance.
+  this.message = {
+    content: messageText,
+    linesAmount: this.getLinesAmount(messageText)
+  };
+
+  // Set the instance content to be the parsed text message.
+  this.content = this.message.content;
+
+  // Set the instance height to match the message lines.
+  this.height = this.message.linesAmount;
+  this.rows = this.height;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked" id="apidoc.element.gitter-cli.marked">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>marked
+        <span class="apidocSignatureSpan">(src, opt, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function marked(src, opt, callback) {
+  if (callback || typeof opt === 'function') {
+    if (!callback) {
+      callback = opt;
+      opt = null;
+    }
+
+    opt = merge({}, marked.defaults, opt || {});
+
+    var highlight = opt.highlight
+      , tokens
+      , pending
+      , i = 0;
+
+    try {
+      tokens = Lexer.lex(src, opt)
+    } catch (e) {
+      return callback(e);
+    }
+
+    pending = tokens.length;
+
+    var done = function(err) {
+      if (err) {
+        opt.highlight = highlight;
+        return callback(err);
+      }
+
+      var out;
+
+      try {
+        out = Parser.parse(tokens, opt);
+      } catch (e) {
+        err = e;
+      }
+
+      opt.highlight = highlight;
+
+      return err
+        ? callback(err)
+        : callback(null, out);
+    };
+
+    if (!highlight || highlight.length &lt; 3) {
+      return done();
+    }
+
+    delete opt.highlight;
+
+    if (!pending) return done();
+
+    for (; i &lt; tokens.length; i++) {
+      (function(token) {
+        if (token.type !== 'code') {
+          return --pending || done();
+        }
+        return highlight(token.text, token.lang, function(err, code) {
+          if (err) return done(err);
+          if (code == null || code === token.text) {
+            return --pending || done();
+          }
+          token.text = code;
+          token.escaped = true;
+          --pending || done();
+        });
+      })(tokens[i]);
+    }
+
+    return;
+  }
+  try {
+    if (opt) opt = merge({}, marked.defaults, opt);
+    return Parser.parse(Lexer.lex(src, opt), opt);
+  } catch (e) {
+    e.message += '\nPlease report this to https://github.com/chjj/marked.';
+    if ((opt || marked.defaults).silent) {
+      return '&lt;p&gt;An error occured:&lt;/p&gt;&lt;pre&gt;'
+        + escape(e.message + '', true)
+        + '&lt;/pre&gt;';
+    }
+    throw e;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message" id="apidoc.element.gitter-cli.message">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>message
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">message = function () {
+  // id: ObjectId,
+  // text: String,
+  // html: String,
+  // sent: Date,
+  // editedAt: Date || null,
+  // fromUser: {
+  //   id: ObjectId,
+  //   username: String,
+  //   displayName: String,
+  //   url: String,
+  //   avatarUrlSmall: Url,
+  //   avatarUrlMedium: Url,
+  //   gv: String,
+  //   v: Number
+  // },
+  // unread: Boolean,
+  // readBy: Number,
+  // urls: Array,
+  // mentions: Array,
+  // issues: Array,
+  // meta: Object
+  //
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.room" id="apidoc.element.gitter-cli.room">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>room
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">room = function () {
+  this._name = null;
+  this._instance = null;
+
+  var emitter = new events.EventEmitter();
+  this.emit = emitter.emit;
+  this.on = emitter.on;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user" id="apidoc.element.gitter-cli.user">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>user
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">user = function (data) {
+<span class="apidocCodeCommentSpan">  /** If defined, the object have following structure:
+   *
+   *  fromUser: {
+   *    id: ObjectId,
+   *    username: String,
+   *    displayName: String,
+   *    url: String,
+   *    avatarUrlSmall: Url,
+   *    avatarUrlMedium: Url,
+   *    gv: String,
+   *    v: Number
+   *  }
+   */
+</span>}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.chat_history" id="apidoc.module.gitter-cli.chat_history">module gitter-cli.chat_history</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history.chat_history" id="apidoc.element.gitter-cli.chat_history.chat_history">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chat_history = function (options) {
+  if (!(this instanceof Blessed.Node)) {
+    return new ChatHistory(options);
+  }
+
+  options = options || {};
+  options.shrink = true;
+  Blessed.Element.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.chat_history.prototype" id="apidoc.module.gitter-cli.chat_history.prototype">module gitter-cli.chat_history.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history.prototype.addMessage" id="apidoc.element.gitter-cli.chat_history.prototype.addMessage">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>addMessage
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMessage = function (message) {
+  // Check if the last message is from the same author.
+  var isSameAuthor = false;
+  if (this.messages.length &gt; 0) {
+    isSameAuthor = this.getLastMessage().author.id === message.author.id;
+  }
+
+  var options = {
+    screen: this.screen,
+    align: this.align || 'left',
+    right: (this.scrollbar ? 1 : 0),
+    tags: this.parseTags,
+    displayAuthorName: !isSameAuthor,
+    model: message,
+  };
+
+  var chatMessage = new ChatHistoryMessage(options);
+
+  chatMessage.position.top = this.getTotalLines();
+
+  // Add the message to the chat history messages collection.
+  this.messages.push(message);
+  this.append(chatMessage);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+// Handle the event when fetching the last messages.
+UI.context.room.on('chatMessages', function (messages) {
+  // Get each message.
+  messages.forEach(function (message) {
+    // Append the message string to the history list.
+    UI.components.history.<span class="apidocCodeKeywordSpan">addMessage</span>(message);
+  });
+
+  // Go to the end of the list.
+  UI.components.history.setScrollPerc(100);
+});
+
+// Handle the new chat message event on the streaming.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history.prototype.getLastMessage" id="apidoc.element.gitter-cli.chat_history.prototype.getLastMessage">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>getLastMessage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLastMessage = function () {
+  return this.messages[this.messages.length - 1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string}
+ * @return {void}
+ */
+ChatHistory.prototype.addMessage = function (message) {
+// Check if the last message is from the same author.
+var isSameAuthor = false;
+if (this.messages.length &gt; 0) {
+  isSameAuthor = this.<span class="apidocCodeKeywordSpan">getLastMessage</span>().author.id === message.author.id;
+}
+
+var options = {
+  screen: this.screen,
+  align: this.align || 'left',
+  right: (this.scrollbar ? 1 : 0),
+  tags: this.parseTags,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history.prototype.getTotalLines" id="apidoc.element.gitter-cli.chat_history.prototype.getTotalLines">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>getTotalLines
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTotalLines = function () {
+  return this.children.map(function (node) {
+    return node.message.linesAmount;
+  }).reduce(function (prevVal, actualVal) {
+    return prevVal + actualVal;
+  }, 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    tags: this.parseTags,
+    displayAuthorName: !isSameAuthor,
+    model: message,
+  };
+
+  var chatMessage = new ChatHistoryMessage(options);
+
+  chatMessage.position.top = this.<span class="apidocCodeKeywordSpan">getTotalLines</span>();
+
+  // Add the message to the chat history messages collection.
+  this.messages.push(message);
+  this.append(chatMessage);
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history.prototype.scrollDown" id="apidoc.element.gitter-cli.chat_history.prototype.scrollDown">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>scrollDown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scrollDown = function () {
+  if (this.getScrollPerc() &lt; 100) {
+    this.setScrollPerc(this.getScrollPerc() + 10);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// History scrolling events.
+UI.screen.key(['up', 'k', 'C-up', 'C-k'], function (ch, key) {
+  var amount = (key.ctrl) ? 10 : 1;
+  UI.components.history.scrollUp();
+});
+UI.screen.key(['down', 'j', 'C-down', 'C-j'], function (ch, key) {
+  var amount = (key.ctrl) ? 10 : 1;
+  UI.components.history.<span class="apidocCodeKeywordSpan">scrollDown</span>();
+});
+
+// Handle the event when fetching the last messages.
+UI.context.room.on('chatMessages', function (messages) {
+  // Get each message.
+  messages.forEach(function (message) {
+    // Append the message string to the history list.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history.prototype.scrollUp" id="apidoc.element.gitter-cli.chat_history.prototype.scrollUp">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history.prototype.</span>scrollUp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scrollUp = function () {
+  if (this.getScrollPerc() &gt; 0) {
+    this.setScrollPerc(this.getScrollPerc() - 10);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // Set the focus on the input.
+  UI.components.input.focus();
+});
+
+// History scrolling events.
+UI.screen.key(['up', 'k', 'C-up', 'C-k'], function (ch, key) {
+  var amount = (key.ctrl) ? 10 : 1;
+  UI.components.history.<span class="apidocCodeKeywordSpan">scrollUp</span>();
+});
+UI.screen.key(['down', 'j', 'C-down', 'C-j'], function (ch, key) {
+  var amount = (key.ctrl) ? 10 : 1;
+  UI.components.history.scrollDown();
+});
+
+// Handle the event when fetching the last messages.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.chat_history_message" id="apidoc.module.gitter-cli.chat_history_message">module gitter-cli.chat_history_message</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history_message.chat_history_message" id="apidoc.element.gitter-cli.chat_history_message.chat_history_message">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>chat_history_message
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chat_history_message = function (options) {
+  // Ensure the `new` instance.
+  if (!(this instanceof Blessed.Node)) {
+    return new ChatHistoryMessage(options);
+  }
+
+  // Override some options.
+  options = options || {};
+  options.shrink = true;
+  options.tags = true;
+  options.top = 0;
+  options.left = 0;
+  options.style = {
+    bg: Styles['chat-history-message'].bg,
+  };
+
+  // // Check if the message is unread.
+  // if (model.messageInstance.unread) {
+  //   // Set a highlighted background color.
+  //   options.style.bg = '#888';
+  // }
+
+  // Call the super.
+  Blessed.Box.call(this, options);
+
+  this.displayAuthorName = options.displayAuthorName;
+
+  // Get the `chatHistoryMessage` content.
+  var messageText = this.getMessageText(options.model);
+
+  // Create the message object for the current instance.
+  this.message = {
+    content: messageText,
+    linesAmount: this.getLinesAmount(messageText)
+  };
+
+  // Set the instance content to be the parsed text message.
+  this.content = this.message.content;
+
+  // Set the instance height to match the message lines.
+  this.height = this.message.linesAmount;
+  this.rows = this.height;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.chat_history_message.prototype" id="apidoc.module.gitter-cli.chat_history_message.prototype">module gitter-cli.chat_history_message.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history_message.prototype.getLinesAmount" id="apidoc.element.gitter-cli.chat_history_message.prototype.getLinesAmount">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history_message.prototype.</span>getLinesAmount
+        <span class="apidocSignatureSpan">(messageText)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLinesAmount = function (messageText) {
+  var amountOfLineBrakes = messageText.split('\n').length;
+  return (amountOfLineBrakes &gt; 0) ? amountOfLineBrakes : 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Get the `chatHistoryMessage` content.
+var messageText = this.getMessageText(options.model);
+
+// Create the message object for the current instance.
+this.message = {
+  content: messageText,
+  linesAmount: this.<span class="apidocCodeKeywordSpan">getLinesAmount</span>(messageText)
+};
+
+// Set the instance content to be the parsed text message.
+this.content = this.message.content;
+
+// Set the instance height to match the message lines.
+this.height = this.message.linesAmount;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history_message.prototype.getMessageText" id="apidoc.element.gitter-cli.chat_history_message.prototype.getMessageText">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history_message.prototype.</span>getMessageText
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMessageText = function (message) {
+  var authorName = message.author.getDisplayName();
+
+  if (authorName.length &gt; 18) {
+    authorName = authorName.substring(0, 17);
+  } else if (authorName.length &lt; 18) {
+    authorName = authorName + Array(18 - authorName.length).join(' ');
+  }
+
+  // Previous author length:
+  // message.author.getDisplayName().length + 3
+  var authorLength = 18,
+      parentWidth = this.screen.width,
+      messageMaxWidth = this.screen.width - authorLength - 4,
+      messageText = message.text;
+
+  // Parse the current text.
+  messageText = this.parseText(messageText, messageMaxWidth);
+
+  // Check if the message text is smaller than the max for the screen.
+  if (messageText.length &gt; messageMaxWidth) {
+    // Word wrap the original message.
+    messageText = wordwrap(messageMaxWidth)(messageText);
+
+    // Process the message text.
+    messageText = messageText.split('\n').map(function (line, index) {
+      // If is the first line, then leave it as it is.
+      if (index &lt; 1) {
+        return line;
+      }
+
+      // Append a number `authorLength` number of spaces before the line.
+      return Array(authorLength + 1).join(' ') + line;
+    }).join('\n');
+  }
+
+  var authorWithColor;
+  if (this.displayAuthorName) {
+    // Get the author name with his distintive display color.
+    authorWithColor = format('{%s-fg}%s{/%s-fg}',
+      message.author.getAuthorColor(),
+      authorName,
+      message.author.getAuthorColor()
+    );
+  } else {
+    authorWithColor = Array(authorLength).join(' ');
+  }
+
+  // Return the parsed text with a `{author}: {message}` format.
+  return format('%s %s', authorWithColor, messageText);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Call the super.
+Blessed.Box.call(this, options);
+
+this.displayAuthorName = options.displayAuthorName;
+
+// Get the `chatHistoryMessage` content.
+var messageText = this.<span class="apidocCodeKeywordSpan">getMessageText</span>(options.model);
+
+// Create the message object for the current instance.
+this.message = {
+  content: messageText,
+  linesAmount: this.getLinesAmount(messageText)
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.chat_history_message.prototype.parseText" id="apidoc.element.gitter-cli.chat_history_message.prototype.parseText">
+        function <span class="apidocSignatureSpan">gitter-cli.chat_history_message.prototype.</span>parseText
+        <span class="apidocSignatureSpan">(messageText, wordwrap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseText = function (messageText, wordwrap) {
+  // Tokenize and parse the original text using the blessed-markdown parser.
+  var tokens = Lexer.lex(messageText);
+  messageText = Marked.parser(tokens);
+
+  // Convert any unconsiderated HTML to text.
+  messageText = HtmlToText.fromString(messageText, {
+    wordwrap: wordwrap || 80
+  });
+
+  // Return the clean message text.
+  return messageText;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // message.author.getDisplayName().length + 3
+  var authorLength = 18,
+  parentWidth = this.screen.width,
+  messageMaxWidth = this.screen.width - authorLength - 4,
+  messageText = message.text;
+
+  // Parse the current text.
+  messageText = this.<span class="apidocCodeKeywordSpan">parseText</span>(messageText, messageMaxWidth);
+
+  // Check if the message text is smaller than the max for the screen.
+  if (messageText.length &gt; messageMaxWidth) {
+// Word wrap the original message.
+messageText = wordwrap(messageMaxWidth)(messageText);
+
+// Process the message text.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.commands" id="apidoc.module.gitter-cli.commands">module gitter-cli.commands</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.commands._requireAuthentication" id="apidoc.element.gitter-cli.commands._requireAuthentication">
+        function <span class="apidocSignatureSpan">gitter-cli.commands.</span>_requireAuthentication
+        <span class="apidocSignatureSpan">(requireAuthentication)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_requireAuthentication = function (requireAuthentication) {
+  var defer = Q.defer();
+
+  if (typeof requireAuthentication === 'undefined' || requireAuthentication) {
+    Gitter.then(function (gitterInstance) {
+      defer.resolve();
+    }).catch(function () {
+      defer.reject();
+    });
+  } else {
+    defer.resolve();
+  }
+
+  return defer.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Display current user information or "You are not logged in."
+ * message if the user doesn't have a valid token.
+ *
+ * @return {void}
+ */
+whoAmI: function () {
+  // Get the logged in user instance.
+  Commands.<span class="apidocCodeKeywordSpan">_requireAuthentication</span>(true).then(User.getCurrentUser).then(function (user
+) {
+    // Display the user display name and username.
+    console.log('\n     You are: %s (%s)\n',
+      chalk.bold(user.displayName), user.username
+    );
+  }).catch(function () {
+    // Display an unauthenticated user message.
+    console.log('You are not logged in.');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.commands.authorize" id="apidoc.element.gitter-cli.commands.authorize">
+        function <span class="apidocSignatureSpan">gitter-cli.commands.</span>authorize
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorize = function (token) {
+  if (typeof token === 'string') {
+    // Set the token based on the user input.
+    Configuration.access.setToken(token).catch(function () {
+      // Or if the token is not correct, display an error.
+      console.log('\n%s\n', chalk.red('The token is not correct.'));
+    });
+
+    // Stop the execution of the method.
+    return undefined;
+  }
+
+  // Display the "Go to url" message with the instructions on the screen.
+  console.log('\nLog in at %s to get your access token.',
+    chalk.blue('https://developer.gitter.im/apps')
+  );
+  console.log('Then, copy your %s and run:\n', chalk.bold('Personal Access Token'));
+  console.log('    %s %s',
+    chalk.bold('gitter-cli authorize'),
+    chalk.bold(chalk.green('paste-your-token-here'))
+  );
+  console.log(chalk.dim(
+    '\n\nVisit the repository to know what\'s happening behind the scenes:',
+    chalk.blue('\nhttps://github.com/RodrigoEspinosa/gitter-cli')
+  ));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.commands.joinRoom" id="apidoc.element.gitter-cli.commands.joinRoom">
+        function <span class="apidocSignatureSpan">gitter-cli.commands.</span>joinRoom
+        <span class="apidocSignatureSpan">(roomName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">joinRoom = function (roomName) {
+  // Ensure that the room name is a string.
+  if (typeof roomName !== 'string') {
+    // If the room name is not a string, display a error message.
+    console.log(chalk.red('You must provide a valid room name.'));
+    // Finish the script excecution.
+    process.exit(1);
+  }
+
+  Commands._requireAuthentication(true).then(function () {
+    // Require the `Room` model.
+    var Room = require('./models/room');
+
+    // Try to join a room.
+    var room = new Room();
+    room.join(roomName);
+
+    // Load the user interface.
+    var ui = require('./ui/main')({ room: room });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.commands.rooms" id="apidoc.element.gitter-cli.commands.rooms">
+        function <span class="apidocSignatureSpan">gitter-cli.commands.</span>rooms
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rooms = function () {
+<span class="apidocCodeCommentSpan">  /**
+   * Display every room on the rooms lists with a color
+   * based on the unreadItems.
+   *
+   * @param {list}
+   * @return {void}
+   */
+</span>  var displayRooms = function (rooms) {
+    // Get the maximum room length name of the list.
+    var maxRoomLength = rooms.map(function (room) {
+      return room.name.length;
+    }).reduce(function (prev, val) {
+      return (prev &gt; val) ? prev : val;
+    }, 0);
+
+    // Increase the max room length to consider the space.
+    maxRoomLength += 1;
+
+    // Display every room.
+    rooms.forEach(function (room, index) {
+      // Set the format for the room name.
+      var roomName = room.name;
+      if (roomName.length &gt; maxRoomLength) {
+        roomName = roomName.substring(0, maxRoomLength - 3) + '...';
+      } else {
+        roomName += Array(maxRoomLength - roomName.length).join(' ');
+      }
+
+      // Get the badge for the current item based on the number of unread messages.
+      var badge = (room.unreadItems &gt; 0) ? chalk.green : chalk.bgBlack;
+
+      // Display the item in the console.
+      console.log(badge(
+        ++index + '.',                        // Display the index number.
+        Array((index &gt; 9) ? 4 : 5).join(' '), // Display a empty amount of spaces.
+        roomName,                             // Display the room name.
+        room.unreadItems                      // Display the unread messages count.
+      ));
+    });
+  };
+
+  // Display each of the user rooms if the user is authenticated.
+  Commands._requireAuthentication(true)
+    .then(User.getCurrentUser)
+    .then(function (user) { return user.rooms(); })
+    .then(displayRooms)
+    .catch(function () {
+      console.log('You are not logged in.');
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      ));
+    });
+  };
+
+  // Display each of the user rooms if the user is authenticated.
+  Commands._requireAuthentication(true)
+    .then(User.getCurrentUser)
+    .then(function (user) { return user.<span class="apidocCodeKeywordSpan">rooms</span>(); })
+    .then(displayRooms)
+    .catch(function () {
+      console.log('You are not logged in.');
+    });
+},
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.commands.setToken" id="apidoc.element.gitter-cli.commands.setToken">
+        function <span class="apidocSignatureSpan">gitter-cli.commands.</span>setToken
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setToken = function (token) {
+  require('./core/configuration').access.setToken(token);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   *
+   * @param {string} token
+   * @return {void}
+   */
+  authorize: function (token) {
+if (typeof token === 'string') {
+  // Set the token based on the user input.
+  Configuration.access.<span class="apidocCodeKeywordSpan">setToken</span>(token).catch(function () {
+    // Or if the token is not correct, display an error.
+    console.log('\n%s\n', chalk.red('The token is not correct.'));
+  });
+
+  // Stop the execution of the method.
+  return undefined;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.commands.whoAmI" id="apidoc.element.gitter-cli.commands.whoAmI">
+        function <span class="apidocSignatureSpan">gitter-cli.commands.</span>whoAmI
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">whoAmI = function () {
+  // Get the logged in user instance.
+  Commands._requireAuthentication(true).then(User.getCurrentUser).then(function (user) {
+    // Display the user display name and username.
+    console.log('\n     You are: %s (%s)\n',
+      chalk.bold(user.displayName), user.username
+    );
+  }).catch(function () {
+    // Display an unauthenticated user message.
+    console.log('You are not logged in.');
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.configuration" id="apidoc.module.gitter-cli.configuration">module gitter-cli.configuration</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.configuration._getSecrets" id="apidoc.element.gitter-cli.configuration._getSecrets">
+        function <span class="apidocSignatureSpan">gitter-cli.configuration.</span>_getSecrets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getSecrets = function () {
+  try {
+    return JSON.parse(Configuration._loadSecretsSync());
+  } catch (error) {
+    return {};
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Check if the session token already exists.
+if (Configuration.token !== null) {
+  // Resolve the promise with the existing token.
+  return deferred.resolve(token);
+}
+
+// Read the json formatted file where the secrets settings lives.
+var secretsData = Configuration.<span class="apidocCodeKeywordSpan">_getSecrets</span>();
+
+// Ensure that the secrets has an authentication-token attribute.
+if (!secretsData.hasOwnProperty('authentication-token')) {
+  deferred.reject(new Error('Secrets file has no authentication-token.'));
+} else {
+  // Set the configuration token.
+  Configuration.token = secretsData['authentication-token'];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.configuration._loadSecrets" id="apidoc.element.gitter-cli.configuration._loadSecrets">
+        function <span class="apidocSignatureSpan">gitter-cli.configuration.</span>_loadSecrets
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_loadSecrets = function (callback) {
+  return Fs.readFile(Configuration.secretsFileLocation, {encoding: 'utf8'}, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.configuration._loadSecretsSync" id="apidoc.element.gitter-cli.configuration._loadSecretsSync">
+        function <span class="apidocSignatureSpan">gitter-cli.configuration.</span>_loadSecretsSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_loadSecretsSync = function () {
+  return Fs.readFileSync(Configuration.secretsFileLocation, {encoding: 'utf8'});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Get the contents of the secret file.
+ *
+ * @return {object}
+ */
+_getSecrets: function () {
+  try {
+    return JSON.parse(Configuration.<span class="apidocCodeKeywordSpan">_loadSecretsSync</span>());
+  } catch (error) {
+    return {};
+  }
+},
+
+/**
+ * Store the current session token.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.connection" id="apidoc.module.gitter-cli.connection">module gitter-cli.connection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.connection.inspect" id="apidoc.element.gitter-cli.connection.inspect">
+        function <span class="apidocSignatureSpan">gitter-cli.connection.</span>inspect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inspect = function () {
+    if (!resolvedPromise) {
+        return { state: "pending" };
+    }
+    return resolvedPromise.inspect();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.connection.promiseDispatch" id="apidoc.element.gitter-cli.connection.promiseDispatch">
+        function <span class="apidocSignatureSpan">gitter-cli.connection.</span>promiseDispatch
+        <span class="apidocSignatureSpan">(resolve, op, operands)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">promiseDispatch = function (resolve, op, operands) {
+    var args = array_slice(arguments);
+    if (messages) {
+        messages.push(args);
+        if (op === "when" &amp;&amp; operands[1]) { // progress operand
+            progressListeners.push(operands[1]);
+        }
+    } else {
+        Q.nextTick(function () {
+            resolvedPromise.promiseDispatch.apply(resolvedPromise, args);
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.connection.valueOf" id="apidoc.element.gitter-cli.connection.valueOf">
+        function <span class="apidocSignatureSpan">gitter-cli.connection.</span>valueOf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">valueOf = function () {
+    if (messages) {
+        return promise;
+    }
+    var nearerValue = nearer(resolvedPromise);
+    if (isPromise(nearerValue)) {
+        resolvedPromise = nearerValue; // shorten chain
+    }
+    return nearerValue;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.logger" id="apidoc.module.gitter-cli.logger">module gitter-cli.logger</a></h1>
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.logger.debug" id="apidoc.element.gitter-cli.logger.debug">
+        function <span class="apidocSignatureSpan">gitter-cli.logger.</span>debug
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.logger.error" id="apidoc.element.gitter-cli.logger.error">
+        function <span class="apidocSignatureSpan">gitter-cli.logger.</span>error
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+
+});
+
+// Handle the room failed joined.
+joinRoom.fail(function (err) {
+  // Log the failed joined room event.
+  logger.<span class="apidocCodeKeywordSpan">error</span>(format('Not possible to join the room: %s', err));
+
+  // Emit the joined room event.
+  self.emit('joinError', err);
+
+  deferred.reject(err);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.logger.info" id="apidoc.element.gitter-cli.logger.info">
+        function <span class="apidocSignatureSpan">gitter-cli.logger.</span>info
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Handle the room successful joined.
+    joinRoom.then(function (room) {
+// Set the private room instance and name properties.
+self._name = roomName;
+self._instance = room;
+
+// Log the joined room event.
+logger.<span class="apidocCodeKeywordSpan">info</span>(format('Joined room: %s', room.name));
+
+// Emit the joined room event.
+self.emit('join', self._instance);
+
+room.chatMessages().then(function (messages) {
+  messages = Message.createInstancesList(messages);
+  self.emit('chatMessages', messages);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.logger.silly" id="apidoc.element.gitter-cli.logger.silly">
+        function <span class="apidocSignatureSpan">gitter-cli.logger.</span>silly
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">silly = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.logger.verbose" id="apidoc.element.gitter-cli.logger.verbose">
+        function <span class="apidocSignatureSpan">gitter-cli.logger.</span>verbose
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verbose = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.logger.warn" id="apidoc.element.gitter-cli.logger.warn">
+        function <span class="apidocSignatureSpan">gitter-cli.logger.</span>warn
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.marked" id="apidoc.module.gitter-cli.marked">module gitter-cli.marked</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.marked" id="apidoc.element.gitter-cli.marked.marked">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>marked
+        <span class="apidocSignatureSpan">(src, opt, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function marked(src, opt, callback) {
+  if (callback || typeof opt === 'function') {
+    if (!callback) {
+      callback = opt;
+      opt = null;
+    }
+
+    opt = merge({}, marked.defaults, opt || {});
+
+    var highlight = opt.highlight
+      , tokens
+      , pending
+      , i = 0;
+
+    try {
+      tokens = Lexer.lex(src, opt)
+    } catch (e) {
+      return callback(e);
+    }
+
+    pending = tokens.length;
+
+    var done = function(err) {
+      if (err) {
+        opt.highlight = highlight;
+        return callback(err);
+      }
+
+      var out;
+
+      try {
+        out = Parser.parse(tokens, opt);
+      } catch (e) {
+        err = e;
+      }
+
+      opt.highlight = highlight;
+
+      return err
+        ? callback(err)
+        : callback(null, out);
+    };
+
+    if (!highlight || highlight.length &lt; 3) {
+      return done();
+    }
+
+    delete opt.highlight;
+
+    if (!pending) return done();
+
+    for (; i &lt; tokens.length; i++) {
+      (function(token) {
+        if (token.type !== 'code') {
+          return --pending || done();
+        }
+        return highlight(token.text, token.lang, function(err, code) {
+          if (err) return done(err);
+          if (code == null || code === token.text) {
+            return --pending || done();
+          }
+          token.text = code;
+          token.escaped = true;
+          --pending || done();
+        });
+      })(tokens[i]);
+    }
+
+    return;
+  }
+  try {
+    if (opt) opt = merge({}, marked.defaults, opt);
+    return Parser.parse(Lexer.lex(src, opt), opt);
+  } catch (e) {
+    e.message += '\nPlease report this to https://github.com/chjj/marked.';
+    if ((opt || marked.defaults).silent) {
+      return '&lt;p&gt;An error occured:&lt;/p&gt;&lt;pre&gt;'
+        + escape(e.message + '', true)
+        + '&lt;/pre&gt;';
+    }
+    throw e;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.InlineLexer" id="apidoc.element.gitter-cli.marked.InlineLexer">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>InlineLexer
+        <span class="apidocSignatureSpan">(links, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InlineLexer(links, options) {
+  this.options = options || marked.defaults;
+  this.links = links;
+  this.rules = inline.normal;
+  this.renderer = this.options.renderer || new Renderer;
+  this.renderer.options = this.options;
+
+  if (!this.links) {
+    throw new
+      Error('Tokens array requires a `links` property.');
+  }
+
+  if (this.options.gfm) {
+    if (this.options.breaks) {
+      this.rules = inline.breaks;
+    } else {
+      this.rules = inline.gfm;
+    }
+  } else if (this.options.pedantic) {
+    this.rules = inline.pedantic;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.Lexer" id="apidoc.element.gitter-cli.marked.Lexer">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>Lexer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Lexer(options) {
+  this.tokens = [];
+  this.tokens.links = {};
+  this.options = options || marked.defaults;
+  this.rules = block.normal;
+
+  if (this.options.gfm) {
+    if (this.options.tables) {
+      this.rules = block.tables;
+    } else {
+      this.rules = block.gfm;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var HtmlToText = require('html-to-text');
+var Styles = require('../styles.json');
+
+var format = require('util').format;
+var wordwrap = require('wordwrap');
+
+// Set the lexer to be compatible with GitHub flavored markdown.
+var Lexer = new Marked.<span class="apidocCodeKeywordSpan">Lexer</span>({
+  gfm: true,
+  tables: false,
+  pedantic: true,
+  sanitize: true,
+  smartypants: true
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.Parser" id="apidoc.element.gitter-cli.marked.Parser">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>Parser
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser(options) {
+  this.tokens = [];
+  this.token = null;
+  this.options = options || marked.defaults;
+  this.options.renderer = this.options.renderer || new Renderer;
+  this.renderer = this.options.renderer;
+  this.renderer.options = this.options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.inlineLexer" id="apidoc.element.gitter-cli.marked.inlineLexer">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>inlineLexer
+        <span class="apidocSignatureSpan">(src, links, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inlineLexer = function (src, links, options) {
+  var inline = new InlineLexer(links, options);
+  return inline.output(src);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.lexer" id="apidoc.element.gitter-cli.marked.lexer">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>lexer
+        <span class="apidocSignatureSpan">(src, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lexer = function (src, options) {
+  var lexer = new Lexer(options);
+  return lexer.lex(src);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.options" id="apidoc.element.gitter-cli.marked.options">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>options
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">options = function (opt) {
+  merge(marked.defaults, opt);
+  return marked;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.parse" id="apidoc.element.gitter-cli.marked.parse">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>parse
+        <span class="apidocSignatureSpan">(src, opt, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function marked(src, opt, callback) {
+  if (callback || typeof opt === 'function') {
+    if (!callback) {
+      callback = opt;
+      opt = null;
+    }
+
+    opt = merge({}, marked.defaults, opt || {});
+
+    var highlight = opt.highlight
+      , tokens
+      , pending
+      , i = 0;
+
+    try {
+      tokens = Lexer.lex(src, opt)
+    } catch (e) {
+      return callback(e);
+    }
+
+    pending = tokens.length;
+
+    var done = function(err) {
+      if (err) {
+        opt.highlight = highlight;
+        return callback(err);
+      }
+
+      var out;
+
+      try {
+        out = Parser.parse(tokens, opt);
+      } catch (e) {
+        err = e;
+      }
+
+      opt.highlight = highlight;
+
+      return err
+        ? callback(err)
+        : callback(null, out);
+    };
+
+    if (!highlight || highlight.length &lt; 3) {
+      return done();
+    }
+
+    delete opt.highlight;
+
+    if (!pending) return done();
+
+    for (; i &lt; tokens.length; i++) {
+      (function(token) {
+        if (token.type !== 'code') {
+          return --pending || done();
+        }
+        return highlight(token.text, token.lang, function(err, code) {
+          if (err) return done(err);
+          if (code == null || code === token.text) {
+            return --pending || done();
+          }
+          token.text = code;
+          token.escaped = true;
+          --pending || done();
+        });
+      })(tokens[i]);
+    }
+
+    return;
+  }
+  try {
+    if (opt) opt = merge({}, marked.defaults, opt);
+    return Parser.parse(Lexer.lex(src, opt), opt);
+  } catch (e) {
+    e.message += '\nPlease report this to https://github.com/chjj/marked.';
+    if ((opt || marked.defaults).silent) {
+      return '&lt;p&gt;An error occured:&lt;/p&gt;&lt;pre&gt;'
+        + escape(e.message + '', true)
+        + '&lt;/pre&gt;';
+    }
+    throw e;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .description('Display a list of rooms that you are part of.')
+  .action(Commands.rooms);
+
+Program
+  .option('--token [token]', 'Set the access-key token for client authentication. This won\'t be persisted.&amp;#
+x27;);
+
+// Parse the application arguments.
+Program.<span class="apidocCodeKeywordSpan">parse</span>(process.argv);
+
+// Check if there are no arguments.
+if (!process.argv.slice(2).length) {
+  // Display the application help.
+  Program.outputHelp();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.parser" id="apidoc.element.gitter-cli.marked.parser">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>parser
+        <span class="apidocSignatureSpan">(src, options, renderer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parser = function (src, options, renderer) {
+  var parser = new Parser(options, renderer);
+  return parser.parse(src);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} messageText
+ * @param {number} wordwrap
+ * @return {string}
+ */
+ChatHistoryMessage.prototype.parseText = function (messageText, wordwrap) {
+// Tokenize and parse the original text using the blessed-markdown parser.
+var tokens = Lexer.lex(messageText);
+messageText = Marked.<span class="apidocCodeKeywordSpan">parser</span>(tokens);
+
+// Convert any unconsiderated HTML to text.
+messageText = HtmlToText.fromString(messageText, {
+  wordwrap: wordwrap || 80
+});
+
+// Return the clean message text.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.marked.setOptions" id="apidoc.element.gitter-cli.marked.setOptions">
+        function <span class="apidocSignatureSpan">gitter-cli.marked.</span>setOptions
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOptions = function (opt) {
+  merge(marked.defaults, opt);
+  return marked;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.message" id="apidoc.module.gitter-cli.message">module gitter-cli.message</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message.message" id="apidoc.element.gitter-cli.message.message">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>message
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">message = function () {
+  // id: ObjectId,
+  // text: String,
+  // html: String,
+  // sent: Date,
+  // editedAt: Date || null,
+  // fromUser: {
+  //   id: ObjectId,
+  //   username: String,
+  //   displayName: String,
+  //   url: String,
+  //   avatarUrlSmall: Url,
+  //   avatarUrlMedium: Url,
+  //   gv: String,
+  //   v: Number
+  // },
+  // unread: Boolean,
+  // readBy: Number,
+  // urls: Array,
+  // mentions: Array,
+  // issues: Array,
+  // meta: Object
+  //
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message.createInstance" id="apidoc.element.gitter-cli.message.createInstance">
+        function <span class="apidocSignatureSpan">gitter-cli.message.</span>createInstance
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createInstance = function (message) {
+  // Intialize the `Message` instance.
+  var instance = new Message();
+
+  if (message.hasOwnProperty('model')) {
+    message = message.model;
+  }
+
+  for (var attrName in message) {
+    if (message.hasOwnProperty(attrName)) {
+      instance[attrName] = message[attrName];
+    }
+  }
+
+  // Call the user post contructor method.
+  instance.postInit();
+
+  // Return the `Message` instance.
+  return instance;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Message.createInstancesList = function (messages) {
+  // Initialize the instances list.
+  var instancesList = [];
+
+  // Create a new instance for every message object.
+  messages.forEach(function (message) {
+    // Push the new instance into the instances list.
+    instancesList.push(Message.<span class="apidocCodeKeywordSpan">createInstance</span>(message));
+  });
+
+  // Return the list of instances.
+  return instancesList;
+};
+
+exports = module.exports = Message;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message.createInstancesList" id="apidoc.element.gitter-cli.message.createInstancesList">
+        function <span class="apidocSignatureSpan">gitter-cli.message.</span>createInstancesList
+        <span class="apidocSignatureSpan">(messages)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createInstancesList = function (messages) {
+  // Initialize the instances list.
+  var instancesList = [];
+
+  // Create a new instance for every message object.
+  messages.forEach(function (message) {
+    // Push the new instance into the instances list.
+    instancesList.push(Message.createInstance(message));
+  });
+
+  // Return the list of instances.
+  return instancesList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Log the joined room event.
+logger.info(format('Joined room: %s', room.name));
+
+// Emit the joined room event.
+self.emit('join', self._instance);
+
+room.chatMessages().then(function (messages) {
+  messages = Message.<span class="apidocCodeKeywordSpan">createInstancesList</span>(messages);
+  self.emit('chatMessages', messages);
+});
+
+// Fetch the streaming events.
+var roomStreaming = room.streaming().chatMessages();
+
+roomStreaming.on('chatMessages', function (message) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.message.prototype" id="apidoc.module.gitter-cli.message.prototype">module gitter-cli.message.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message.prototype.getAuthor" id="apidoc.element.gitter-cli.message.prototype.getAuthor">
+        function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>getAuthor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthor = function () {
+  return this.author.displayName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message.prototype.getAuthorWithColor" id="apidoc.element.gitter-cli.message.prototype.getAuthorWithColor">
+        function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>getAuthorWithColor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthorWithColor = function () {
+  // Get the author color.
+  var color = this.author.getAuthorColor();
+
+  // Return the author name wrapped with his user color.
+  return format('{%s-fg}%s{/%s-fg}', color, this.author.getDisplayName(), color);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message.prototype.getText" id="apidoc.element.gitter-cli.message.prototype.getText">
+        function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>getText
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getText = function () {
+  return this.text || '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.message.prototype.postInit" id="apidoc.element.gitter-cli.message.prototype.postInit">
+        function <span class="apidocSignatureSpan">gitter-cli.message.prototype.</span>postInit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postInit = function () {
+  // Set the message author attribute with the `Author` instance.
+  this.author = User.getOrCreate(this.fromUser);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ for (var attrName in message) {
+   if (message.hasOwnProperty(attrName)) {
+     instance[attrName] = message[attrName];
+   }
+ }
+
+ // Call the user post contructor method.
+ instance.<span class="apidocCodeKeywordSpan">postInit</span>();
+
+ // Return the `Message` instance.
+ return instance;
+};
+
+/**
+* Convert a recived messages list objects into `Messages` instances.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.room" id="apidoc.module.gitter-cli.room">module gitter-cli.room</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.room.room" id="apidoc.element.gitter-cli.room.room">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>room
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">room = function () {
+  this._name = null;
+  this._instance = null;
+
+  var emitter = new events.EventEmitter();
+  this.emit = emitter.emit;
+  this.on = emitter.on;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.room.prototype" id="apidoc.module.gitter-cli.room.prototype">module gitter-cli.room.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.room.prototype.join" id="apidoc.element.gitter-cli.room.prototype.join">
+        function <span class="apidocSignatureSpan">gitter-cli.room.prototype.</span>join
+        <span class="apidocSignatureSpan">(roomName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">join = function (roomName) {
+  var self = this;
+  var deferred = Q.defer();
+
+  Gitter.then(function (gitter) {
+    // Get the join room promise.
+    var joinRoom = gitter.rooms.join(roomName);
+
+    // Handle the room successful joined.
+    joinRoom.then(function (room) {
+      // Set the private room instance and name properties.
+      self._name = roomName;
+      self._instance = room;
+
+      // Log the joined room event.
+      logger.info(format('Joined room: %s', room.name));
+
+      // Emit the joined room event.
+      self.emit('join', self._instance);
+
+      room.chatMessages().then(function (messages) {
+        messages = Message.createInstancesList(messages);
+        self.emit('chatMessages', messages);
+      });
+
+      // Fetch the streaming events.
+      var roomStreaming = room.streaming().chatMessages();
+
+      roomStreaming.on('chatMessages', function (message) {
+        if (message.operation === 'create') {
+          message = Message.createInstance(message);
+          self.emit('streaming:chatMessages', message);
+        } else if (message.operation === 'update') {
+          // TODO Implement message updating.
+        } else {
+          // TODO
+        }
+      });
+
+    });
+
+    // Handle the room failed joined.
+    joinRoom.fail(function (err) {
+      // Log the failed joined room event.
+      logger.error(format('Not possible to join the room: %s', err));
+
+      // Emit the joined room event.
+      self.emit('joinError', err);
+
+      deferred.reject(err);
+    });
+
+    deferred.resolve(joinRoom);
+  });
+
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  Commands._requireAuthentication(true).then(function () {
+    // Require the `Room` model.
+    var Room = require('./models/room');
+
+    // Try to join a room.
+    var room = new Room();
+    room.<span class="apidocCodeKeywordSpan">join</span>(roomName);
+
+    // Load the user interface.
+    var ui = require('./ui/main')({ room: room });
+  });
+},
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.room.prototype.writeMessage" id="apidoc.element.gitter-cli.room.prototype.writeMessage">
+        function <span class="apidocSignatureSpan">gitter-cli.room.prototype.</span>writeMessage
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeMessage = function (msg) {
+  if (this._instance === null) {
+    logger.error('Not possible to write a message. No room instance.');
+    // TODO: Throw new error
+    return false;
+  }
+
+  return this._instance.send(msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Send a message based on the input component value.
+ * Then, clear the input component.
+ * @returns {void}
+ */
+var sendMessage = function () {
+  var message = UI.components.input.getValue();
+  UI.context.room.<span class="apidocCodeKeywordSpan">writeMessage</span>(message);
+
+  UI.components.input.clearValue();
+  UI.screen.render();
+};
+
+UI.screen.on('prerender', function () {
+  setHistoryHeight();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.user" id="apidoc.module.gitter-cli.user">module gitter-cli.user</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.user" id="apidoc.element.gitter-cli.user.user">
+        function <span class="apidocSignatureSpan">gitter-cli.</span>user
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">user = function (data) {
+<span class="apidocCodeCommentSpan">  /** If defined, the object have following structure:
+   *
+   *  fromUser: {
+   *    id: ObjectId,
+   *    username: String,
+   *    displayName: String,
+   *    url: String,
+   *    avatarUrlSmall: Url,
+   *    avatarUrlMedium: Url,
+   *    gv: String,
+   *    v: Number
+   *  }
+   */
+</span>}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.createInstance" id="apidoc.element.gitter-cli.user.createInstance">
+        function <span class="apidocSignatureSpan">gitter-cli.user.</span>createInstance
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createInstance = function (data) {
+  var user = new User();
+
+  // Check if the data is defined.
+  if (typeof data !== 'undefined') {
+    // Add every attribute to the current instance.
+    for (var attrName in data) {
+      if (data.hasOwnProperty(attrName)) {
+        user[attrName] = data[attrName];
+      }
+    }
+  }
+
+  // Call the user post contructor method.
+  user.postInit();
+
+  // Return the user instance.
+  return user;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Message.createInstancesList = function (messages) {
+  // Initialize the instances list.
+  var instancesList = [];
+
+  // Create a new instance for every message object.
+  messages.forEach(function (message) {
+    // Push the new instance into the instances list.
+    instancesList.push(Message.<span class="apidocCodeKeywordSpan">createInstance</span>(message));
+  });
+
+  // Return the list of instances.
+  return instancesList;
+};
+
+exports = module.exports = Message;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.getCurrentUser" id="apidoc.element.gitter-cli.user.getCurrentUser">
+        function <span class="apidocSignatureSpan">gitter-cli.user.</span>getCurrentUser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentUser = function () {
+  var defer = Q.defer();
+
+  Gitter.then(function (gitter) {
+    gitter.currentUser().then(function (currentUser) {
+      defer.resolve(currentUser);
+    }).catch(function (err) {
+      defer.reject(err);
+    });
+  });
+
+  return defer.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.getOrCreate" id="apidoc.element.gitter-cli.user.getOrCreate">
+        function <span class="apidocSignatureSpan">gitter-cli.user.</span>getOrCreate
+        <span class="apidocSignatureSpan">(user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOrCreate = function (user) {
+  if (userInstances.hasOwnProperty(user.username)) {
+    return userInstances[user.username];
+  }
+  return User.createInstance(user);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+/**
+ * Method triggered after instance creation.
+ */
+Message.prototype.postInit = function () {
+  // Set the message author attribute with the `Author` instance.
+  this.author = User.<span class="apidocCodeKeywordSpan">getOrCreate</span>(this.fromUser);
+};
+
+/**
+ * Get the message text.
+ * @return {string} text
+ */
+Message.prototype.getText = function () {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitter-cli.user.prototype" id="apidoc.module.gitter-cli.user.prototype">module gitter-cli.user.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.prototype.getAuthorColor" id="apidoc.element.gitter-cli.user.prototype.getAuthorColor">
+        function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>getAuthorColor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthorColor = function () {
+  if (this.color !== undefined) {
+    return this.color;
+  }
+
+  this.color = authorColorList.random();
+  return this.color;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Get the message author display name wrapped with his user color.
+* @return {string} authorWithColor
+*/
+Message.prototype.getAuthorWithColor = function () {
+ // Get the author color.
+ var color = this.author.<span class="apidocCodeKeywordSpan">getAuthorColor</span>();
+
+ // Return the author name wrapped with his user color.
+ return format('{%s-fg}%s{/%s-fg}', color, this.author.getDisplayName(), color);
+};
+
+/**
+* Convert a recived message object insto `Message` instance.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.prototype.getDisplayName" id="apidoc.element.gitter-cli.user.prototype.getDisplayName">
+        function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>getDisplayName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDisplayName = function () {
+  if (this.displayName &amp;&amp; this.displayName.trim() !== '') {
+    return this.displayName;
+  }
+
+   return '@' + this.getUsername();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @return {string} authorWithColor
+*/
+Message.prototype.getAuthorWithColor = function () {
+ // Get the author color.
+ var color = this.author.getAuthorColor();
+
+ // Return the author name wrapped with his user color.
+ return format('{%s-fg}%s{/%s-fg}', color, this.author.<span class="apidocCodeKeywordSpan">getDisplayName</span>(), color
+);
+};
+
+/**
+* Convert a recived message object insto `Message` instance.
+*
+* @param {string} message
+* @return {string}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.prototype.getUsername" id="apidoc.element.gitter-cli.user.prototype.getUsername">
+        function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>getUsername
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUsername = function () {
+  return this.username;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @return {string} displayName
+ */
+User.prototype.getDisplayName = function () {
+  if (this.displayName &amp;&amp; this.displayName.trim() !== '') {
+    return this.displayName;
+  }
+
+   return '@' + this.<span class="apidocCodeKeywordSpan">getUsername</span>();
+};
+
+/**
+ * Get the user representative color.
+ * @return {string} color
+ */
+User.prototype.getAuthorColor = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitter-cli.user.prototype.postInit" id="apidoc.element.gitter-cli.user.prototype.postInit">
+        function <span class="apidocSignatureSpan">gitter-cli.user.prototype.</span>postInit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postInit = function () {
+
+  if (!userInstances.hasOwnProperty(this.username)) {
+    userInstances[this.username] = this;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ for (var attrName in message) {
+   if (message.hasOwnProperty(attrName)) {
+     instance[attrName] = message[attrName];
+   }
+ }
+
+ // Call the user post contructor method.
+ instance.<span class="apidocCodeKeywordSpan">postInit</span>();
+
+ // Return the `Message` instance.
+ return instance;
+};
+
+/**
+* Convert a recived messages list objects into `Messages` instances.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
